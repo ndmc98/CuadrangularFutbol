@@ -1,4 +1,4 @@
-class equipo:
+class Equipo:
 
     def __init__(self, nombre):
         self.nombre = nombre
