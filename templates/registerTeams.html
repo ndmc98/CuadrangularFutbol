@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block body %}
+<div class=registerTeams>
+	<form class="pure-form pure-form-stacked" action="{{ url_for('registerMatches') }}" method=post>
+		<pre>Numero de equipos: {{ n }}</pre>
+		<pre>Ingresa la informacion sobre los equipos:</pre>
+		<!--<pre>Seconds taken: {{ time }}</pre>-->
+			<table class="pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						<th>Equipo</th>
+						<th colspan="8">Nombre</th>
+					</tr>	
+				</thead>
+				<tbody>
+					{% for i in range(1, n+1) %}
+					<tr>
+						<td> Equipo {{i}}</td>
+						<td><input id="team{{i}}" name="team{{i}}"+ type="text"></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		<button type="submit" class="pure-button pure-button-primary">Done</button>
+	</form>
+</div>
+{% endblock %}

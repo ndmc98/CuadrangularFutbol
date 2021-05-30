@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block body %}
+<div class=positionsTable>
+	<form class="pure-form pure-form-stacked" action="{{ url_for('index') }}">
+		<h3> Tabla de posiciones </h3>
+
+		<!--<pre>Seconds taken: {{ time }}</pre>-->
+			<table class="pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						{% for h in head %}
+							<th>{{h}}</th>
+						{% endfor %}
+					</tr>	
+				</thead>
+				<tbody>
+					{% for reg in data %}
+						<tr>
+						{% for r in reg %}
+							<td> {{r}}</td>
+						{% endfor %}
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<button type="submit" class="pure-button pure-button-primary">Return Home</button>
+		</form>
+</div>
+{% endblock %}

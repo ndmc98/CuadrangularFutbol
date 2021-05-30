@@ -37,4 +37,56 @@ def index():
 
 @app.route("/registerMatches/", methods=["GET", "POST"])
 def registroJuegos():
-    print('algo')
+    if request.method == "POST":
+        try:
+            equipos = []
+            i=1
+
+            for regs in request.form:
+                equipos.append(str(escape(request.form["team"+str(i)])))
+                i += 1
+            
+            for j in equipos:
+                campeonato.registroEquipo(j)
+
+            campeonato.encuentros()
+
+            juegos = []
+
+            for pareja in campeonato.rivales:
+                par = (pareja[0].nombre,pareja[1].nombre)
+                juegos.append(par)
+
+            return render_template("registerMatches.html",matches=juegos)
+
+        except Exception as e:
+            print(e)
+            flash("Error: Se ha producido un fallo. Inserte información valida. "+str(e))
+
+    return render_template("registerTeams.html")
+
+@app.route("/positionsTable/", methods=["GET", "POST"])
+def tablaPosiciones():
+    if request.method == "POST":
+        try:
+            for i in range(len(campeonato.rivales)):
+                campeonato.crearPartido(campeonato.rivales[i],int(request.form["goalsT1M"+str(i)]),int(request.form["goalsT2M"+str(i)]))
+            
+            data = []
+            for equ in campeonato.equipos:
+                cabecera = vars(equ)
+                d = []
+                for item in cabecera:
+                    d.append(cabecera[item])
+                data.append(d)
+
+            return render_template("positionsTable.html",head = cabecera,data = data)
+
+        except Exception as e:
+            print(e)
+            flash("Error: Se ha producido un fallo. Inserte información valida. "+str(e))
+    
+    return render_template("form.html")        
+
+if __name__ == "__main__":
+    app.run()

@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block body %}
+<div class=registerMatches>
+	<form class="pure-form pure-form-stacked" action="{{ url_for('positionsTable') }}" method=post>
+		<pre>Registro de información de los partidos:</pre>
+		<!--<pre>Seconds taken: {{ time }}</pre>-->
+			<table class="pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						<th>Equipo 1</th>
+						<th>Goles</th>
+						<th>Equipo 2</th>
+						<th>Goles</th>
+					</tr>	
+				</thead>
+				<tbody>
+					{% for juego in matches %}
+						<tr>
+							<td> {{juego[0]}}</td>
+							<td><input id="goalsT1M{{matches.index(juego)}}" name="goalsT1M{{matches.index(juego)}}"+ type="number" min="0" required></td>
+							<td> {{juego[1]}}</td>
+							<td><input id="goalsT2M{{matches.index(juego)}}" name="goalsT2M{{matches.index(juego)}}"+ type="number" min="0" required></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		<button type="submit" class="pure-button pure-button-primary">Done</button>
+	</form>
+</div>
+{% endblock %}

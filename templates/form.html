@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block body %}
+<form class="pure-form pure-form-stacked" action="{{ url_for('index') }}" method=post>
+	<label for="teams">
+	Registre el numero de equipos del cuadrangular de futbol
+	</label>
+	<input id="teams" name="teams" type="number" min="2" required>
+	<button type="submit" class="pure-button pure-button-primary">Go</button>
+</form>
+{% endblock %}
