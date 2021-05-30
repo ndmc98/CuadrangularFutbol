@@ -1,5 +1,5 @@
 # Cuadrangular de fútbol
-*Este repositorio es una aplicación para un cuadrangular de fútbol que permite registrar hasta cuatro equipos, efectuar un todos contra todos, registrar el marcador de los partidos y permite la visualización de la tabla con las posiciones finales.*
+*Este repositorio es una aplicación para un cuadrangular de fútbol que permite registrar hasta cuatro equipos, efectuar un todos contra todos, registrar el marcador de los partidos y permitir la visualización de la tabla con las posiciones finales.*
 
 ## Comenzando
 *Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local.*
