@@ -19,7 +19,7 @@ class Torneo:
         self.rivales = list(itertools.combinations(self.equipos, 2))
 
     def posiciones(self):
-        self.equipos.sort(key=lambda eq:(eq.puntos,eq.gd,eq.gf))
+        self.equipos.sort(key=lambda eq:(-eq.puntos,-eq.gd,-eq.gf))
 
     def crearPartido(self,pareja,goles1,goles2):
         pareja[0].gf += goles1
@@ -29,7 +29,7 @@ class Torneo:
 
         for i in pareja:
             i.jugados += 1
-            i.dg = i.gf - i.gc
+            i.gd = i.gf - i.gc
 
         if goles1 == goles2:
             for i in pareja:
