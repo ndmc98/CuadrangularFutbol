@@ -3,7 +3,7 @@ from models.equipo import *
 
 import itertools
 
-class torneo:
+class Torneo:
 
     def __init__(self):
         self.equipos = []
