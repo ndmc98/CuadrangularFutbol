@@ -4,8 +4,6 @@
 ## Comenzando
 *Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local.*
 
-Mira Despliegue local para conocer como desplegar el proyecto localmente.
-
 ### Stack
 * Python
 * Flask
@@ -14,3 +12,19 @@ Mira Despliegue local para conocer como desplegar el proyecto localmente.
 ### Pre-requisitos
 1. Instalar [Python](https://www.python.org/downloads/)
 2. Instalar [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/)  
+
+## Instrucciones
+*Puedes descargar el proyecto o clonar el repositorio para su ejecución*
+
+*En tu terminal debes ejecutar app.py. Recuerda que varia según tu sistema operativo*
+
+```
+python app.py
+```
+
+*Una vez lo has ejecutado, dirijete a la siguiente URL para visualizar la aplicación:*
+
+```
+http://127.0.0.1:5000/
+```
+
