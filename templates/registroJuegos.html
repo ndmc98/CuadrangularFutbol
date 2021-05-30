@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% block body %}
-<div class=registerMatches>
-	<form class="pure-form pure-form-stacked" action="{{ url_for('positionsTable') }}" method=post>
+<div class=registroEquipos>
+	<form class="pure-form pure-form-stacked" action="{{ url_for('tablaPosiciones') }}" method=post>
 		<pre>Registro de información de los partidos:</pre>
 		<!--<pre>Seconds taken: {{ time }}</pre>-->
 			<table class="pure-table pure-table-bordered">
@@ -24,7 +24,7 @@
 					{% endfor %}
 				</tbody>
 			</table>
-		<button type="submit" class="pure-button pure-button-primary">Done</button>
+		<button type="submit" class="pure-button pure-button-primary">OK</button>
 	</form>
 </div>
 {% endblock %}

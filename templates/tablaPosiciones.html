@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 {% block body %}
-<div class=positionsTable>
+<div class=tablaPosiciones>
 	<form class="pure-form pure-form-stacked" action="{{ url_for('index') }}">
 		<h3> Tabla de posiciones </h3>
 
@@ -23,7 +23,7 @@
 					{% endfor %}
 				</tbody>
 			</table>
-			<button type="submit" class="pure-button pure-button-primary">Return Home</button>
+			<button type="submit" class="pure-button pure-button-primary">Regresar</button>
 		</form>
 </div>
 {% endblock %}

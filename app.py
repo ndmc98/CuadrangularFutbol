@@ -28,14 +28,14 @@ def index():
             elif n < minEquipos:
                 flash("Error: el número mínimo de equipos debe ser"+str(minEquipos))
             else:
-                return render_template("registerTeams.html",n=n)
+                return render_template("registroEquipos.html",n=n)
         except Exception as e:
             print(e)
             flash("Se ha producido un fallo. Inserte información valida. "+str(e))
         
     return render_template("form.html")
 
-@app.route("/registerMatches/", methods=["GET", "POST"])
+@app.route("/registroJuegos/", methods=["GET", "POST"])
 def registroJuegos():
     if request.method == "POST":
         try:
@@ -57,15 +57,15 @@ def registroJuegos():
                 par = (pareja[0].nombre,pareja[1].nombre)
                 juegos.append(par)
 
-            return render_template("registerMatches.html",matches=juegos)
+            return render_template("registroJuegos.html",matches=juegos)
 
         except Exception as e:
             print(e)
             flash("Error: Se ha producido un fallo. Inserte información valida. "+str(e))
 
-    return render_template("registerTeams.html")
+    return render_template("registroEquipos.html")
 
-@app.route("/positionsTable/", methods=["GET", "POST"])
+@app.route("/tablaPosiciones/", methods=["GET", "POST"])
 def tablaPosiciones():
     if request.method == "POST":
         try:
@@ -80,7 +80,7 @@ def tablaPosiciones():
                     d.append(cabecera[item])
                 data.append(d)
 
-            return render_template("positionsTable.html",head = cabecera,data = data)
+            return render_template("tablaPosiciones.html",head = cabecera,data = data)
 
         except Exception as e:
             print(e)
