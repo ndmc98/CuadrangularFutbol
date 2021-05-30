@@ -3,6 +3,11 @@ from models.equipo import *
 
 import itertools
 
+'''
+Clase Torneo que registra equipos, empareja rivales, 
+crea partidos, asigna valores propios del equipo tras el juego y
+calcula la tabla de posiciones final. 
+'''
 class Torneo:
 
     def __init__(self):

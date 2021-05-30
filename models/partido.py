@@ -1,3 +1,6 @@
+'''
+Clase Partido que controla los objetos tipo partido. 
+'''
 class Partido:
 
     def __init__(self, equipo1, equipo2, goles1, goles2):

@@ -3,7 +3,7 @@
 <div class=registroEquipos>
 	<form class="pure-form pure-form-stacked" action="{{ url_for('registroJuegos') }}" method=post>
 		<pre>Numero de equipos: {{ n }}</pre>
-		<pre>Ingresa la informacion sobre los equipos:</pre>
+		<pre>Ingrese el nombre de los equipos:</pre>
 		<!--<pre>Seconds taken: {{ time }}</pre>-->
 			<table class="pure-table pure-table-bordered">
 				<thead>
@@ -21,7 +21,7 @@
 					{% endfor %}
 				</tbody>
 			</table>
-		<button type="submit" class="pure-button pure-button-primary">OK</button>
+		<button type="submit" class="pure-button pure-button-primary">Avanzar</button>
 	</form>
 </div>
 {% endblock %}

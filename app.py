@@ -4,6 +4,12 @@ from logic.torneo import *
 import os
 import time
 
+'''
+App de flask que enruta y coordina las direcciones para la 
+ejecución de la aplicación. Contiene, entre otros, los métodos
+de captura de la información y los respectivos resultados de 
+los HTMLs y su direccionamiento.
+'''
 app = Flask(__name__)
 
 app.secret_key = os.urandom(24)

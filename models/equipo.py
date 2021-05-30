@@ -1,3 +1,6 @@
+'''
+Clase Equipo que controla los objetos tipo equipo. 
+'''
 class Equipo:
 
     def __init__(self, nombre):
