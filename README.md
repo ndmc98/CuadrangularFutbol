@@ -14,9 +14,9 @@
 2. Instalar [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/)  
 
 ## Instrucciones
-*Puedes descargar el proyecto o clonar el repositorio para su ejecución*
+*Puedes descargar el proyecto o clonar el repositorio para su ejecución. Luego ubícate sobre la carpeta.*
 
-*En tu terminal debes ejecutar app.py. Recuerda que varia según tu sistema operativo*
+*En tu terminal debes ejecutar app.py. Recuerda que varía según tu sistema operativo:*
 
 ```
 python app.py
@@ -27,4 +27,3 @@ python app.py
 ```
 http://127.0.0.1:5000/
 ```
-
